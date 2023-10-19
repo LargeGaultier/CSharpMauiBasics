@@ -1,6 +1,6 @@
 ﻿namespace Robots
 {
-    public class Robot
+    public class Robot : RobotAbstrait
     {
         protected int _positionX;
         protected int _positionY;
@@ -26,6 +26,11 @@
         {
             _positionX += posX;
             _positionY += posY;
+        }
+
+        public override string Démarrer()
+        {
+           return "Démarrage du robot";
         }
         #endregion
     }
