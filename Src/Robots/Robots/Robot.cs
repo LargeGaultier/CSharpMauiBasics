@@ -2,30 +2,28 @@
 {
     public class Robot : RobotAbstrait
     {
-        protected int _positionX;
-        protected int _positionY;
+       public Point Position { get; set; }
 
         public string Name { get; set; } = "R2D2";
 
         #region constructeurs
-        public Robot(string name, int posX, int posY)
+        public Robot(string name,Point position)
         {
             Name = name;
-            _positionX = posX;
-            _positionY = posY;
+            Position = position;
         }
         #endregion
 
         #region Méthodes
         public virtual string AfficherPosition()
         {
-            return $"Je suis à la position {_positionX}, {_positionY}";
+            return $"Je suis à la position {Position.X}, {Position.Y}";
         }
 
         public void Avancer(int posX,int posY)
         {
-            _positionX += posX;
-            _positionY += posY;
+            Position.X += posX;
+            Position.Y += posY;
         }
 
         public override string Démarrer()
