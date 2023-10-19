@@ -2,27 +2,31 @@
 {
     public class Robot
     {
-        public string Name { get; set; } = "R2D2"; 
-        public int PositionX { get; set; }
-        public int PositionY { get; set; }
+        protected int _positionX;
+        protected int _positionY;
 
+        public string Name { get; set; } = "R2D2";
 
+        #region constructeurs
         public Robot(string name, int posX, int posY)
         {
             Name = name;
-            PositionX = posX;
-            PositionY = posY;
+            _positionX = posX;
+            _positionY = posY;
         }
+        #endregion
 
-        public string AfficherPosition()
+        #region Méthodes
+        public virtual string AfficherPosition()
         {
-            return $"Je suis à la position {PositionX}, {PositionY}";
+            return $"Je suis à la position {_positionX}, {_positionY}";
         }
 
         public void Avancer(int posX,int posY)
         {
-            PositionX += posX;
-            PositionY += posY;
+            _positionX += posX;
+            _positionY += posY;
         }
+        #endregion
     }
 }
