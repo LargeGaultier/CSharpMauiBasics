@@ -27,13 +27,13 @@ namespace Robots
 
         public void Nettoyer()
         {
-            Console.WriteLine($"{Name} nettoie");
+            Console.WriteLine($"{Nom} nettoie");
         }
 
         public void Déplacer(Point PointDestination)
         {
 
-            Console.WriteLine($"les robot {Name}, c'est déplacer de {Utils.CalculerDistance(Position, PointDestination)}");
+            Console.WriteLine($"les robot {Nom}, c'est déplacer de {Utils.CalculerDistance(Position, PointDestination)}");
 
                 Position = PointDestination;
          

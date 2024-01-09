@@ -8,6 +8,9 @@ namespace Robots
 {
     public abstract class RobotAbstrait
     {
+        public decimal Vitesse { get; set; }
+        public string Nom { get; set; }
+
         public abstract string Démarrer();
         public string Arrêter()
         {

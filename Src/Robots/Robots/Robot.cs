@@ -4,12 +4,16 @@
     {
        public Point Position { get; set; }
 
-        public string Name { get; set; } = "R2D2";
 
+        public Robot(string name, decimal vitesse)
+        {
+            Nom = name;
+            Vitesse = vitesse;
+        }
         #region constructeurs
         public Robot(string name,Point position)
         {
-            Name = name;
+            Nom = name;
             Position = position;
         }
         #endregion
